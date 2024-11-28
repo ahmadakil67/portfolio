@@ -201,7 +201,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  margin: 0px 300px 0px 0px;
+  margin: auto;
 }
 
 .section__pic-container {
