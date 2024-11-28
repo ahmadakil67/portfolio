@@ -182,7 +182,6 @@ a:hover {
 }
 
 /* SECTIONS */
-
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -196,7 +195,6 @@ section {
 }
 
 /* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
@@ -209,6 +207,7 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  margin-left: auto;
   box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -243,14 +242,12 @@ section {
 }
 
 /* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -298,7 +295,6 @@ section {
 }
 
 /* ABOUT SECTION */
-
 #about {
   position: relative;
 }
@@ -330,7 +326,7 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1rem;
   /* flex: 1; */
   background: white;
   border-radius: 2rem;
@@ -366,7 +362,7 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .article-container {
@@ -374,7 +370,7 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 1rem;
   justify-content: space-around;
 }
 
@@ -389,8 +385,22 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
 
+
+/* PROJECT SECTION */
+
+.project-img {
+  border-radius: 1rem;
+  width: 450px;
+  height: 25%;
+}
+
+#projects .details-container:hover {
+  transform: translateY(-5px) scale(1.05); /* Lift and slightly enlarge */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0.9; /* Slightly fade in */
+}
+/* RESEARCH SECTION */
 #research {
   position: relative;
 }
@@ -415,7 +425,6 @@ article .icon {
 }
 
 /* CONTACT */
-
 #contact {
   display: flex;
   justify-content: center;
@@ -562,4 +571,3 @@ input[type="submit"]:hover {
 .counter-container{
   text-align: center;
 }
-
