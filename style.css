@@ -59,7 +59,8 @@ a:hover {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
 }
 
 .logo:hover {
@@ -200,6 +201,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  margin: 0px 300px 0px 0px;
 }
 
 .section__pic-container {
@@ -209,6 +211,7 @@ section {
   margin: auto 0;
   margin-left: auto;
   box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .section__text {
@@ -217,7 +220,7 @@ section {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .section__text__p1 {
