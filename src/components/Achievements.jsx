@@ -81,7 +81,7 @@ export const Achievements = () => {
                     {/* Certifications Section Wrapper */}
                     <div className="space-y-8">
                         {/* Machine Learning Specialization */}
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="block group">
+                        <a href="https://coursera.org/share/ea7a2fe6066cd22085b1e42e3d5f80e2" target="_blank" rel="noopener noreferrer" className="block group">
                             <motion.div 
                                 className="bg-gray-900 bg-opacity-50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 text-left shadow-lg transition-colors duration-300 group-hover:border-cyan-400"
                                 initial={{ opacity: 0, y: 50 }}
@@ -107,7 +107,7 @@ export const Achievements = () => {
                         </a>
 
                         {/* Deep Learning Specialization */}
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="block group">
+                        <a href="https://coursera.org/share/c619a92dba0833e3c98f1bf118fbdaf6" target="_blank" rel="noopener noreferrer" className="block group">
                             <motion.div 
                                 className="bg-gray-900 bg-opacity-50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 text-left shadow-lg transition-colors duration-300 group-hover:border-cyan-400"
                                 initial={{ opacity: 0, y: 50 }}
