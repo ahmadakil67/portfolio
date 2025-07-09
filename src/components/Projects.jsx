@@ -22,28 +22,28 @@ const icons = {
 
 const projectsData = [
   {
+    title: "EduFlex: An Online Learning Platform",
+    description: "A comprehensive online learning platform offering courses, quizzes, and user-friendly navigation, built with modern web technologies.",
+    technologies: ["react", "tailwindcss", "mongodb", "firebase"],
+    imageUrl: "https://i.ibb.co/JRG3wSgt/Gemini-Generated-Image-oby8joby8joby8jo.png",
+    liveLink: "https://event-explorer-cdca0.web.app/",
+    codeLink: "https://github.com/ahmadakil67/eduflex",
+  },
+  {
     title: "Roomies: A Roommate Finding Website",
     description: "A full-stack app to help users find compatible roommates, featuring real-time interaction and secure authentication.",
     technologies: ["react", "tailwindcss", "mongodb", "firebase"],
-    imageUrl: "https://placehold.co/600x400/000319/cyan?text=Roomies",
+    imageUrl: "https://i.ibb.co/My07gv8C/Gemini-Generated-Image-8xcoc88xcoc88xco.png",
     liveLink: "#",
-    codeLink: "#",
-  },
-  {
-    title: "Dragon News: An Interactive News Portal",
-    description: "A real-time news application delivering articles across various topics with a responsive design and personalized content.",
-    technologies: ["react", "firebase", "tailwindcss"],
-    imageUrl: "https://placehold.co/600x400/000319/cyan?text=Dragon+News",
-    liveLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/ahmadakil67/rommies-client",
   },
   {
     title: "Phudu: A Doctor Appointment Website",
     description: "An interactive web application for booking doctor appointments, built with a focus on user-friendly design and functionality.",
     technologies: ["javascript", "react", "tailwindcss", "vite"],
-    imageUrl: "https://placehold.co/600x400/000319/cyan?text=Phudu",
-    liveLink: "#",
-    codeLink: "#",
+    imageUrl: "https://i.ibb.co/CsYqbCmc/Gemini-Generated-Image-l1mn8yl1mn8yl1mn.png",
+    liveLink: "https://wide-eyed-frogs.surge.sh/",
+    codeLink: "https://github.com/ahmadakil67/Phudu",
   },
 ];
 
