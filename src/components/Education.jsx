@@ -13,15 +13,8 @@ const App = () => {
 // Data for the education section
 const educationData = [
   {
-    degree: "MSc (Thesis) in Computer Science & Engineering",
-    university: "Shahjalal University of Science and Technology (SUST)",
-    date: "Jan 2025 - Present",
-    details:
-      "Focusing on advanced research and thesis work in a specialized area of computer science.",
-  },
-  {
     degree: "B.Sc(Eng) in Computer Science & Engineering",
-    university: "North East University, Bangladesh",
+    university: "North East University Bangladesh, Sylhet",
     date: "Graduated: June 2024",
     details:
       "Key coursework included Data Structures, Algorithms, Web Development, Database Management, and Artificial Intelligence.",

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-const skills = [
-  // --- Web Development Skills ---
+const webSkills = [
   {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -14,7 +13,6 @@ const skills = [
     name: "Next.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
-
   {
     name: "TailwindCSS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
@@ -43,27 +41,61 @@ const skills = [
     name: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
+];
+
+const mlSkills = [
   {
     name: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "TensorFlow",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
+    name: "Keras",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg",
+  },
+  {
+    name: "PyTorch",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+  },
+  {
+    name: "Scikit-Learn",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg",
+  },
+  {
+    name: "Pandas",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+  },
+  {
+    name: "NumPy",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+  },
+  {
+    name: "OpenCV",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
   },
 ];
 
 export default function Home() {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+  const [activeTab, setActiveTab] = useState("web");
 
   const handleMouseMove = (event) => {
     const { clientX, clientY } = event;
     setMousePosition({ x: clientX, y: clientY });
   };
 
+  const skillsToShow = activeTab === "web" ? webSkills : mlSkills;
+
   return (
     <div
       id="home"
       onMouseMove={handleMouseMove}
-      className="relative bg-[#000319] text-white p-6 sm:p-8 flex flex-col items-center justify-center h-screen overflow-hidden"
+      className="relative bg-[#000319] text-white p-6 sm:p-8 flex flex-col items-center justify-center min-h-screen overflow-hidden"
     >
-      {/* The Grid and Spotlight Background */}
+      {/* Background grid + spotlight */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -76,11 +108,12 @@ export default function Home() {
           WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, black 20%, transparent 60%)`,
         }}
       />
-
-      {/* Vertical Social Links on the left */}
+      {/* Vertical Social Links on the left */}{" "}
       <div className="fixed left-4 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 z-20">
+        {" "}
         <div className="flex flex-col items-center gap-6">
-          {/* GitHub Link */}
+          {" "}
+          {/* GitHub Link */}{" "}
           <a
             href="https://github.com/ahmadakil67"
             target="_blank"
@@ -88,6 +121,7 @@ export default function Home() {
             className="text-gray-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
             aria-label="GitHub Profile"
           >
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -99,10 +133,11 @@ export default function Home() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </a>
-          {/* LinkedIn Link */}
+              {" "}
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>{" "}
+            </svg>{" "}
+          </a>{" "}
+          {/* LinkedIn Link */}{" "}
           <a
             href="https://www.linkedin.com/in/akil67"
             target="_blank"
@@ -110,6 +145,7 @@ export default function Home() {
             className="text-gray-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
             aria-label="LinkedIn Profile"
           >
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -121,17 +157,19 @@ export default function Home() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-          {/* Email Link */}
+              {" "}
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>{" "}
+              <rect x="2" y="9" width="4" height="12"></rect>{" "}
+              <circle cx="4" cy="4" r="2"></circle>{" "}
+            </svg>{" "}
+          </a>{" "}
+          {/* Email Link */}{" "}
           <a
             href="mailto:ferozbinakil@gmail.com"
             className="text-gray-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
             aria-label="Email Me"
           >
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -143,15 +181,17 @@ export default function Home() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-          </a>
+              {" "}
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>{" "}
+              <polyline points="22,6 12,13 2,6"></polyline>{" "}
+            </svg>{" "}
+          </a>{" "}
           <a
             href="tel:+8801751578424"
             className="text-gray-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
             aria-label="Call Me"
           >
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -163,13 +203,13 @@ export default function Home() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.15 8.63 19.79 19.79 0 0 1 0 0.18 2 2 0 0 1 2 0h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L6.91 7.09a16 16 0 0 0 9 9l.91-.91a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </a>
-        </div>
+              {" "}
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.15 8.63 19.79 19.79 0 0 1 0 0.18 2 2 0 0 1 2 0h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L6.91 7.09a16 16 0 0 0 9 9l.91-.91a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z"></path>{" "}
+            </svg>{" "}
+          </a>{" "}
+        </div>{" "}
       </div>
-
-      {/* Main content container */}
+      {/* --- Main content --- */}
       <div className="relative z-10 flex flex-col items-center justify-center">
         <h1 className="text-4xl sm:text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
           Portfolio of <br />
@@ -182,9 +222,33 @@ export default function Home() {
           Hi, I'm Ahmad Akil, a full stack software engineer.
         </p>
 
-        {/* --- Engaging Skills Section --- */}
-        <div className="mt-10 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl z-10 group">
-          {skills.map((skill) => (
+        {/* --- Tabs --- */}
+        <div className="mt-8 flex gap-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur px-2 py-1">
+          <button
+            onClick={() => setActiveTab("web")}
+            className={`px-4 py-1 rounded-lg text-sm sm:text-base transition ${
+              activeTab === "web"
+                ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/30"
+                : "text-gray-300 hover:text-white"
+            }`}
+          >
+            Web Skills
+          </button>
+          <button
+            onClick={() => setActiveTab("ml")}
+            className={`px-4 py-1 rounded-lg text-sm sm:text-base transition ${
+              activeTab === "ml"
+                ? "bg-violet-500/20 text-violet-300 border border-violet-400/30"
+                : "text-gray-300 hover:text-white"
+            }`}
+          >
+            Machine Learning
+          </button>
+        </div>
+
+        {/* --- Skills Grid --- */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl z-10 group">
+          {skillsToShow.map((skill) => (
             <div
               key={skill.name}
               className="relative flex flex-col items-center transition-all duration-300 ease-in-out cursor-pointer 

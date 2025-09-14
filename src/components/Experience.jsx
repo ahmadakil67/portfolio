@@ -15,7 +15,7 @@ const experienceData = [
   {
     title: "Software Engineering Intern",
     company: "Creativise Tech Solutions",
-    date: "May 2025 - Present",
+    date: "June 2025 - Present",
     description: [
       "Working with Next.js and Tailwind CSS for modern, responsive front-end development.",
       "Collaborating within a team environment using Git and GitHub for version control and code management.",
