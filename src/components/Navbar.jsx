@@ -5,21 +5,12 @@ import "./global.css"; // Ensure global styles are imported
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   // Effect to handle body scroll lock
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    // Cleanup function to reset overflow when component unmounts
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => { document.body.style.overflow = "auto"; };
   }, [isOpen]);
 
   const linkClasses =
@@ -40,6 +31,7 @@ const Navbar = () => {
       >
         Home
       </Link>
+
       <Link
         to="experience"
         spy={true}
@@ -52,6 +44,21 @@ const Navbar = () => {
       >
         Experience
       </Link>
+
+      {/* 🔹 NEW: Skills link after Experience */}
+      <Link
+        to="skills"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className={linkClasses}
+        activeClass={activeClass}
+        onClick={() => setIsOpen(false)}
+      >
+        Skills
+      </Link>
+
       <Link
         to="projects"
         spy={true}
@@ -115,6 +122,8 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none z-50"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
               <svg
                 className="w-8 h-8"
