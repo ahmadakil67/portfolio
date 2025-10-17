@@ -117,12 +117,12 @@ export default function Home() {
           </h1>
 
           <p className="font-semibold text-lg sm:text-xl md:text-2xl mt-6 sm:mt-8">
-            Hi, I'm Ahmad Akil, a full stack software engineer.
+            Hi, I'm Ahmad Akil, a full stack web developer.
           </p>
 
                     {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ODChTGwfNN81siVJij4TjcQojpxBSWFv/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-8 px-6 py-3 bg-cyan-500/20 border border-cyan-400 rounded-full 
